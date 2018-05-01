@@ -15,7 +15,7 @@
                 <a class="nav-link" href="{{ route('guest.colis.formColis') }}">Expédier un colis</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('guest.colis.formColis') }}">Proposer un trajet</a>
+                <a class="nav-link" href="{{ route('guest.trajet.formTrajet') }}">Proposer un trajet</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('guest.colis.formColis') }}">Voir les annonces</a>

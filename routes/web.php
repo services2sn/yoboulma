@@ -22,7 +22,17 @@ Route::namespace('Guest')->name('guest.')->group(function() {
     Route::namespace('Colis')->prefix('colis')->name('colis.')->group(function() {
 
       Route::get('expedier-colis', 'ColisController@form')->name('formColis');
+      //Route::post('expedier-colis', 'ColisController@form_2')->name('formColis2');
       Route::post('expedier-colis', 'ColisController@handle')->name('handle');
+
+    });
+
+    // Proposer trajet-form
+    Route::namespace('Trajet')->prefix('trajet')->name('trajet.')->group(function() {
+
+      Route::get('proposer-trajet', 'TrajetController@form')->name('formTrajet');
+      //Route::post('expedier-colis', 'ColisController@form_2')->name('formColis2');
+      Route::post('proposer-trajet', 'TrajetController@handle')->name('handle');
 
     });
 
