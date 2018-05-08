@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class RegisterController extends Controller
 {
     public function form() {
-        return view('guest.auth.register.form');
+        return view('guest.auth.register.form')->with('connection',FALSE);
     }
 
     public function handle(Request $request) {
@@ -37,7 +37,7 @@ class RegisterController extends Controller
             'text' => 'Yoboulma vous souhaite la bienvenue !!!'
           ]);
         }
-        return view('guest.home.home')->with('username',$request->input('username')->with('connection',TRUE));
+        return view('guest.home.index')->with('username',$request->input('username')->with('connection',TRUE));
 
     }
 }

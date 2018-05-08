@@ -10,6 +10,6 @@ footer {
 }
 
 .footer {
-	position : relative;;
+	position : fixed;;
 	bottom: 0; /* à titre d'exemple */
 }

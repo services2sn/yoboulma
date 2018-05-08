@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function form() {
-        return view('guest.auth.login.form');
+        return view('guest.auth.login.form')->with('connection',FALSE);
     }
 
     public function handle(Request $request) {
@@ -22,7 +22,7 @@ class LoginController extends Controller
         $users = User::whereRaw($partial_requete)->first();
 
         if(!empty($users) && password_verify($password,$users->password)){
-          return view('guest.home.home')->with('username',$users->username)->with('connection',TRUE);
+          return view('guest.home.index')->with('username',$users->username)->with('connection',TRUE);
         }
         else{
           return view('guest.auth.login.form');

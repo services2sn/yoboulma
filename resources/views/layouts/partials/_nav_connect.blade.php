@@ -12,13 +12,13 @@
     <div class="collapse navbar-collapse" id="guest-header-menu">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Expédier un colis</a>
+                <a class="nav-link" href="{{ route('guest.colis.formColis', ['connection' => 'TRUE', 'username' => $username] ) }}">Expédier un colis</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Proposer un trajet</a>
+                <a class="nav-link" href="{{ route('guest.trajet.formTrajet', ['connection' => 'TRUE', 'username' => $username]) }}">Proposer un trajet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Voir les annonces</a>
+                <a class="nav-link" href="{{ route('guest.annonce.vueAnnonce',['connection' => 'TRUE', 'username' => $username]) }}">Voir les annonces</a>
             </li>
 
         </ul>
@@ -39,8 +39,8 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="{{ route('guest.home') }}"> <span class="glyphicon glyphicon-log-out"> Déconnexion</span></a>
-    <a class="dropdown-item" href="#"> <span class="glyphicon glyphicon-cog"> Paramètres</span></a>
-    <a class="dropdown-item" href="#"> <span class="glyphicon glyphicon-user"> Profil</span></a>
+    <a class="dropdown-item" href="{{ route('guest.home.parametre',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-cog"> Paramètres</span></a>
+    <a class="dropdown-item" href="{{ route('guest.home.profil',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-user"> Profil</span></a>
   </div>
 </div>
 

@@ -3,7 +3,11 @@
 @section('content')
     {{-- Guest Header --}}
 
-    @include('layouts/partials/_nav')
+    @if($connection OR str_contains(Request::fullUrl(), 'connection'))
+      @include('layouts/partials/_nav_connect')
+    @else
+      @include('layouts/partials/_nav')
+    @endif
 
     @yield('guest-content')
 @endsection

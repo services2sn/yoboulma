@@ -8,9 +8,11 @@ use App\Http\Controllers\Controller;
 
 class TrajetController extends Controller
 {
-    public function form() {
-        return view('guest.trajet.formTrajet');
-        //return 'debogage de la vue';
+    public function form(Request $request) {
+        if($request->get('connection') == "TRUE")
+          return view('guest.trajet.formTrajet')->with('connection',TRUE)->with('username',$request->get('username'));
+        else
+          return view('guest.trajet.formTrajet')->with('connection',FALSE);
     }
 
 
@@ -28,7 +30,10 @@ class TrajetController extends Controller
            'proposal_price' => $request->input('price'),
            'transportation_type_id' => $request->input('transport'),
        ]);
-        return view('guest.home.index');
+        if($request->get('connection') == "TRUE")
+          return view('guest.home.index')->with('connection',TRUE)->with('username',$request->get('username'));
+        else
+          return view('guest.home.index')->with('connection',FALSE);
     }
 
   }

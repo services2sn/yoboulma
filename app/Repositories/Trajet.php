@@ -10,7 +10,8 @@ class Trajet extends Model{
 
   protected $fillable = [
       'lieu_depart', 'lieu_arrivee','date_depart', 'date_arrivee',
-      'detour_max','etapes','accepted_format','frequence','proposal_price','transportation_type_id'
+      'detour_max','etapes','accepted_format','frequence','proposal_price',
+      'transportation_type_id'
   ];
 
   /**
@@ -18,7 +19,6 @@ class Trajet extends Model{
    *
    * @var array
    */
-
 
 }
 

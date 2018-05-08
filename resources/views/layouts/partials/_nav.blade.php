@@ -18,7 +18,7 @@
                 <a class="nav-link" href="{{ route('guest.trajet.formTrajet') }}">Proposer un trajet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('guest.colis.formColis') }}">Voir les annonces</a>
+                <a class="nav-link" href="{{ route('guest.annonce.vueAnnonce') }}">Voir les annonces</a>
             </li>
 
         </ul>

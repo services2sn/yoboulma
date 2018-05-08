@@ -36,6 +36,16 @@ Route::namespace('Guest')->name('guest.')->group(function() {
 
     });
 
+    // Vue des annonces
+
+    Route::namespace('Annonce')->prefix('annonce')->name('annonce.')->group(function() {
+
+      Route::get('vue-annonces', 'AnnonceController@form')->name('vueAnnonce');
+      //Route::post('expedier-colis', 'ColisController@form_2')->name('formColis2');
+      Route::post('vue-annonces', 'AnnonceController@handle')->name('handle');
+
+    });
+
     // auth
     Route::namespace('Auth')->prefix('auth')->name('auth.')->group(function() {
         // login

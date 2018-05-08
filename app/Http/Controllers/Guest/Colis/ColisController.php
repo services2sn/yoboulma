@@ -8,8 +8,11 @@ use App\Http\Controllers\Controller;
 
 class ColisController extends Controller
 {
-    public function form() {
-        return view('guest.colis.formColis');
+    public function form(Request $request) {
+        if($request->get('connection') == "TRUE")
+          return view('guest.colis.formColis')->with('connection',TRUE)->with('username',$request->get('username'));
+        else
+          return view('guest.colis.formColis')->with('connection',FALSE);
         //return 'debogage de la vue';
     }
 
@@ -29,7 +32,10 @@ class ColisController extends Controller
            'fees' => $request->input('fees'),
            'first_price_ttc' => $request->input('price_ttc'),
        ]);
-        return view('guest.home.index');
+        if($request->get('connection') == "TRUE")
+          return view('guest.home.index')->with('connection',TRUE)->with('username',$request->get('username'));
+        else
+          return view('guest.home.index')->with('connection',FALSE);
     }
 
   }
