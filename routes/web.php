@@ -60,4 +60,24 @@ Route::namespace('Guest')->name('guest.')->group(function() {
 
         });
     });
+
+    // paramètres
+    Route::namespace('Parametre')->prefix('parametre')->name('parametre.')->group(function() {
+
+      Route::get('vue-parametre', 'ParametreController@form')->name('vueParametre');
+      //Route::post('expedier-colis', 'ColisController@form_2')->name('formColis2');
+      Route::post('vue-parametre', 'ParametreController@handle')->name('handle');
+
+    });
+
+    // profil
+    Route::namespace('Profil')->prefix('profil')->name('profil.')->group(function() {
+
+      Route::get('vue-profil', 'ProfilController@form')->name('vueProfil');
+      //Route::post('expedier-colis', 'ColisController@form_2')->name('formColis2');
+      Route::post('vue-profil', 'ProfilController@handle')->name('handle');
+
+    });
+
+
 });

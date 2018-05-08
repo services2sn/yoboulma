@@ -192,7 +192,7 @@
                     <label for="price" class="col-md-4 control-label">Prix proposé</label>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" name="price" value="{{ old('price') }}" required autofocus>
+                        <input type="text" class="form-control" name="price" value="{{ old('price') }}" required >
 
                         @if ($errors->has('price'))
                             <span class="help-block">

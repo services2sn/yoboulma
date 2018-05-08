@@ -39,8 +39,8 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="{{ route('guest.home') }}"> <span class="glyphicon glyphicon-log-out"> Déconnexion</span></a>
-    <a class="dropdown-item" href="{{ route('guest.home.parametre',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-cog"> Paramètres</span></a>
-    <a class="dropdown-item" href="{{ route('guest.home.profil',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-user"> Profil</span></a>
+    <a class="dropdown-item" href="{{ route('guest.parametre.vueParametre',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-cog"> Paramètres</span></a>
+    <a class="dropdown-item" href="{{ route('guest.profil.vueProfil',['connection' => 'TRUE', 'username' => $username]) }}"> <span class="glyphicon glyphicon-user"> Profil</span></a>
   </div>
 </div>
 
