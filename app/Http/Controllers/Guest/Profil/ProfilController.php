@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 
 class ProfilController extends Controller
 {
-
+  public function form(Request $request) {
+      return view('guest.profil.vueProfil')->with('connection',TRUE)->with('username',$request->get('username'));
+  }
 }
 
 

@@ -25,7 +25,7 @@ class LoginController extends Controller
           return view('guest.home.index')->with('username',$users->username)->with('connection',TRUE);
         }
         else{
-          return view('guest.auth.login.form');
+          return view('guest.auth.login.form')->with('connection',FALSE);
         }
         //return 'handle login';
     }
