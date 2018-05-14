@@ -117,7 +117,7 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="format" class="col-md-4 control-label"> Moyen de transport </label>
+                        <label for="transport" class="col-md-4 control-label"> Moyen de transport </label>
                         <div class="row">
                           <div class=" form-check form-check-inline ">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
